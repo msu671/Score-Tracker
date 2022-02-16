@@ -56,13 +56,16 @@ class Counter extends React.Component{
         score: 0
     };
 
+    incrementScore(){
+        console.log('Hi, from inside incrementScore!');
+    }
 
     render(){
         return (
             <div className="counter">
             <button className="counter-action decrement">-</button>
             <span className="counter-score">{this.state.score}</span>
-            <button className="counter-action inrement">+</button>
+            <button className="counter-action inrement" onClick={this.incrementScore}>+</button>
          </div>
         );
     }
